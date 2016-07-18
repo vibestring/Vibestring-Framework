@@ -6,7 +6,8 @@
 <link href="dist/css/all.css" rel="stylesheet" />  	
 </head>
 <body class="menu-visible">
-<header id="header" class="menu-fixed">
+
+ <header id="header" class="menu-fixed">
 	<div id="overlay" class="inner">
 	<a id="close_menu" href="#" class="close-btn"></a>
 		<div id="modal" class="container">			
@@ -39,150 +40,343 @@
 					<span></span>
 				</div>
 			</div>
-</header>
-<div id="content" canvas="container" class="menu-down">
-<div class="inner-hd">
-			<h1>Slidebars Dev Page</h1>
+</header> 
+<div id="content" canvas="container" class="menu-down clearfix">
+	<div class="inner-hd clearfix"> <div id="over"></div> 
+			<section class="clearfix">
+				<div class="container">
+				<h2>Slidebars Dev Page</h2>
 
-			<p>You'd need to open the console to view the results of some of these tests.</p>
+				<p>You'd need to open the console to view the results of some of these tests.</p>
 
-			<h4>Left Slidebar Controls</h4>
+				<h4>Left Slidebar Controls</h4>
 
-			<p>
-				<button class="js-open-left-slidebar">Open left Slidebar</button>
-				<button class="js-close-left-slidebar">Close left Slidebar</button>
-				<button class="js-toggle-left-slidebar">Toggle left Slidebar</button>
-			</p>
+				<p>
+					<button class="js-open-left-slidebar">Open left Slidebar</button>
+					<button class="js-close-left-slidebar">Close left Slidebar</button>
+					<button class="js-toggle-left-slidebar">Toggle left Slidebar</button>
+				</p>
 
-			<h4>Right Slidebar Controls</h4>
+				<h4>Right Slidebar Controls</h4>
 
-			<p>
-				<button class="js-open-right-slidebar">Open right Slidebar</button>
-				<button class="js-close-right-slidebar">Close right Slidebar</button>
-				<button class="js-toggle-right-slidebar">Toggle right Slidebar</button>
-			</p>
+				<p>
+					<button class="js-open-right-slidebar">Open right Slidebar</button>
+					<button class="js-close-right-slidebar">Close right Slidebar</button>
+					<button class="js-toggle-right-slidebar">Toggle right Slidebar</button>
+				</p>
 
-			<h4>Top Slidebar Controls</h4>
+				<h4>Top Slidebar Controls</h4>
 
-			<p>
-				<button class="js-open-top-slidebar">Open top Slidebar</button>
-				<button class="js-close-top-slidebar">Close top Slidebar</button>
-				<button class="js-toggle-top-slidebar">Toggle top Slidebar</button>
-			</p>
+				<p>
+					<button class="js-open-top-slidebar">Open top Slidebar</button>
+					<button class="js-close-top-slidebar">Close top Slidebar</button>
+					<button class="js-toggle-top-slidebar">Toggle top Slidebar</button>
+				</p>
 
-			<h4>Bottom Slidebar Controls</h4>
+				<h4>Bottom Slidebar Controls</h4>
 
-			<p>
-				<button class="js-open-bottom-slidebar">Open bottom Slidebar</button>
-				<button class="js-close-bottom-slidebar">Close bottom Slidebar</button>
-				<button class="js-toggle-bottom-slidebar">Toggle bottom Slidebar</button>
-			</p>
+				<p>
+					<button class="js-open-bottom-slidebar">Open bottom Slidebar</button>
+					<button class="js-close-bottom-slidebar">Close bottom Slidebar</button>
+					<button class="js-toggle-bottom-slidebar">Toggle bottom Slidebar</button>
+				</p>
 
-			<h4>Other Controls</h4>
+				<h4>Other Controls</h4>
 
-			<p>
-				<button class="js-close-any-slidebar">Close any Slidebar</button>
-			</p>
+				<p>
+					<button class="js-close-any-slidebar">Close any Slidebar</button>
+				</p>
 
-			<h4>Initialization, Exit and CSS Reset</h4>
+				<h4>Initialization, Exit and CSS Reset</h4>
 
-			<p>
-				<button class="js-initialize-slidebars">Initialize Slidebars</button>
-				<button class="js-exit-slidebars">Exit Slidebars</button>
-				<button class="js-reset-slidebars-css">Reset Slidebars CSS</button>
-			</p>
+				<p>
+					<button class="js-initialize-slidebars">Initialize Slidebars</button>
+					<button class="js-exit-slidebars">Exit Slidebars</button>
+					<button class="js-reset-slidebars-css">Reset Slidebars CSS</button>
+				</p>
 
-			<h4>Is and Get</h4>
+				<h4>Is and Get</h4>
 
-			<p>
-				<button class="js-is-active">Is Slidebars active?</button>
-				<button class="js-is-active-slidebar">Is Slidebar with id active?</button>
-				<button class="js-get-active-slidebar">Get id of active Slidebar</button>
-				<button class="js-get-all-slidebars">Get all Slidebar id's</button>
-				<button class="js-get-slidebar">Get Slidebar by id</button>
-			</p>
+				<p>
+					<button class="js-is-active">Is Slidebars active?</button>
+					<button class="js-is-active-slidebar">Is Slidebar with id active?</button>
+					<button class="js-get-active-slidebar">Get id of active Slidebar</button>
+					<button class="js-get-all-slidebars">Get all Slidebar id's</button>
+					<button class="js-get-slidebar">Get Slidebar by id</button>
+				</p>
 
-			<h4>Callbacks</h4>
+				<h4>Callbacks</h4>
 
-			<p>
-				<button class="js-init-callback">Init callback</button>
-				<button class="js-exit-callback">Exit callback</button>
-				<button class="js-css-callback">CSS callback</button>
-				<button class="js-open-callback">Open callback</button>
-				<button class="js-close-callback">Close callback</button>
-				<button class="js-toggle-callback">Toggle callback</button>
-			</p>
-            
-            <div id="widths"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col col-16-16"><div class="content">16-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-15-16"><div class="content">15-16</div></div>
-			<div class="col col-1-16"><div class="content">1-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-14-16"><div class="content">14-16</div></div>
-			<div class="col col-2-16"><div class="content">2-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-13-16"><div class="content">13-16</div></div>
-			<div class="col col-3-16"><div class="content">3-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-12-16"><div class="content">12-16</div></div>
-			<div class="col col-4-16"><div class="content">4-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-11-16"><div class="content">11-16</div></div>
-			<div class="col col-5-16"><div class="content">5-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-10-16"><div class="content">10-16</div></div>
-			<div class="col col-6-16"><div class="content">6-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-9-16"><div class="content">9-16</div></div>
-			<div class="col col-7-16"><div class="content">7-16</div></div>
-		</div>
-		<div class="row">
-			<div class="col col-8-16"><div class="content">8-16</div></div>
-			<div class="col col-8-16"><div class="content">8-16</div></div>
-		</div>	
-	</div>
-         <div id="over"></div>   
-</div> 
-</div>       
-		<div off-canvas="slidebar-1 left reveal">
-        <h1>Reveal</h1>
-			<p>Slidebar with id 'slidebar-1' on the left side and reveal style.</p>
-		</div>
+				<p>
+					<button class="js-init-callback">Init callback</button>
+					<button class="js-exit-callback">Exit callback</button>
+					<button class="js-css-callback">CSS callback</button>
+					<button class="js-open-callback">Open callback</button>
+					<button class="js-close-callback">Close callback</button>
+					<button class="js-toggle-callback">Toggle callback</button>
+				</p>	            
+	         
+	            </div>
+	    	</section>
+		    <section class="clearfix">
+		       <h2 id="widths"></h2>
+			<div class="container">
+				<div class="row">
+					<div class="col col-16-16"><div class="content">16-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-15-16"><div class="content">15-16</div></div>
+					<div class="col col-1-16"><div class="content">1-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-14-16"><div class="content">14-16</div></div>
+					<div class="col col-2-16"><div class="content">2-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-13-16"><div class="content">13-16</div></div>
+					<div class="col col-3-16"><div class="content">3-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-12-16"><div class="content">12-16</div></div>
+					<div class="col col-4-16"><div class="content">4-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-11-16"><div class="content">11-16</div></div>
+					<div class="col col-5-16"><div class="content">5-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-10-16"><div class="content">10-16</div></div>
+					<div class="col col-6-16"><div class="content">6-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-9-16"><div class="content">9-16</div></div>
+					<div class="col col-7-16"><div class="content">7-16</div></div>
+				</div>
+				<div class="row">
+					<div class="col col-8-16"><div class="content">8-16</div></div>
+					<div class="col col-8-16"><div class="content">8-16</div></div>
+				</div>	
+			</div>
+			</section>
+			<section class="elements clearfix">
+			<div class="container">
+			<h2 class="dev-title-header">Form Elements</h2>
+			<form>
+		    <ul class="heading">
+		      <li>Element</li>
+		      <li>Outlined Element</li>
+	
+		    </ul>
+		    <ul>
+		      <li class="fields solid"><input type="text" autofocus=""></li>
+		      <li class="field outlined"><input type="text" autofocus=""></li>
+		    </ul>
+		    <ul>
+		      <li class="fields solid"><input type="text"></li>	
+		      <li class="fields outlined"><input type="text"></li>		     
+		    </ul>
+		    <ul>
+		      <li class="fields solid"><input type="text" required=""><input type="submit"></li>	
+		       <li class="fields outlined"><input type="text" required=""><input type="submit"></li>			    
+		    </ul>
+		    <ul>
+		      <li class="fields solid"><input type="text"></li>		    
+		      <li class="fields outlined"><input type="text"></li>		    
+		    </ul>
+		    <ul>
+		      <li class="fields solid"><textarea></textarea></li>     
+		      <li class="fields outlined"><textarea></textarea></li>     
+		    </ul>
+		    <ul>
+		      <li class="feilds solid"><input type="password" placeholder="password"></li>	 
+		      <li class="feilds outlined"><input type="password" placeholder="password"></li>	 
+		    </ul>
+		    <ul>
+		      <li class="feilds solid"><input type="radio"></li>		 
+		      <li class="feilds"><input type="radio"></li>		 
+		    </ul>
+		    <ul>
+		      <li><input type="radio" checked=""></li>	    
+		      <li><input type="radio" checked=""></li>	    
+		    </ul>
+		    <ul>
+		      <li><input type="checkbox"></li>
+		      <li><input type="checkbox"></li>
+		    </ul>
+		    <ul>
+		      <li><input type="checkbox" checked=""></li>		    
+		      <li><input type="checkbox" checked=""></li>		    
+		    </ul>
+		    <ul>
+		      <li><select><option></option><option>Option 1</option></select></li>	     
+		      <li><select><option></option><option>Option 1</option></select></li>	     
+		    </ul>
+		    <ul>
+		      <li><select><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select></li> 	     
+		      <li><select><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select></li> 	     
+		    </ul>
+		    <ul>
+		      <li><input type="text" placeholder="placeholder"></li>
+		      <li><input type="text" placeholder="placeholder"></li>
+		    
+		    </ul>
+		    <ul>
+		      <li><input type="search"></li>
+		      <li><input type="search"></li>
+		     
+		    </ul>
+		    <ul>
+		      <li><input type="file"></li>
+		      <li><input type="file"></li>
+		    
+		    </ul>
+		    <ul>
+		      <li><fieldset><legend>Legend</legend><label for="field">Label</label><input id="field"></fieldset></li>
+		      <li><fieldset><legend>Legend</legend><label for="field">Label</label><input id="field"></fieldset></li>
+		     
+		    </ul>
+		    <ul>
+		      <li><input type="submit"></li>
+		      <li><input type="submit"></li>
 
-		<div off-canvas="slidebar-2 right shift">
-         <h1>Shift</h1>
-			<p>Slidebar with id 'slidebar-2' on the right side and shift style.</p>
-		</div>
+		    </ul>
+		    <ul>
+		      <li><button>Button</button></li>
+		      <li><button>Button</button></li>
+		      
+		    <ul>
+		      <li><input type="reset"></li>
+		      <li><input type="reset"></li>
+		     
+		    </ul>
+		    <ul>
+		      <li><input type="email"></li>
+		      <li><input type="email"></li>
+		      
+		    </ul>
+		    <ul>
+		      <li><input type="tel"></li>
+		      <li><input type="tel"></li>
+		     
+		    </ul>
+		    <ul>
+		      <li><input type="url"></li>
+		      <li><input type="url"></li>
+		      
+		    </ul>
+		    <ul>
+		      <li><input type="number"></li>
+		      <li><input type="number"></li>
+		      
+		    </ul>
+		    <ul>
+		      <li><input type="number" min="0" max="15" step="3"></li>
+		      <li><input type="number" min="0" max="15" step="3"></li>
+		     
+		    </ul>
+		    <ul>
+		      <li><input type="range"></li>
+		      <li><input type="range"></li>
+		      
+		    </ul>
+		    <ul>
+		      <li><input type="range" min="0" max="15" step="3"></li>
+		      <li><input type="range" min="0" max="15" step="3"></li>
 
-		<div off-canvas="slidebar-3 top push">
-        <h1>Push</h1>
-			<p>Slidebar with id 'slidebar-3' on the top and push style.</p>
-		</div>
+		    </ul>
+		    <ul>
+		      <li><input type="date"></li>
+		      <li><input type="date"></li>
+		     
+		    </ul>
+		    <ul>
+		      <li><input type="month"></li>
+		      <li><input type="month"></li>
+		   
+		    </ul>
+		    <ul>
+		      <li><input type="week"></li>
+		      <li><input type="week"></li>
+		    
+		    </ul>
+		    <ul>
+		      <li><input type="time"></li>
+		      <li><input type="time"></li>
+		     
+		    </ul>
+		    <ul>
+		      <li><input type="datetime"></li>
+		      <li><input type="datetime"></li>
+		    </ul>
+		    <ul>
+		      <li><input type="datetime-local"></li>
+		      <li><input type="datetime-local"></li>
+		
+		    </ul>
+		    <ul>
+		      <li><input type="color"></li>
+		      <li><input type="color"></li>
+		   
+		    </ul>
+		    <ul>
+		      <li><input type="color" value="#ff3d3d"></li>
+		      <li><input type="color" value="#ff3d3d"></li>
+		    
+		    </ul>
+		    <ul>
+		      <li class="progress-element"><progress max="100" value="10"></progress></li>
+		      <li class="progress-element"><progress max="100" value="10"></progress></li>
+		    
+		   
+		    </ul>
+		    <ul>
+		      <li><progress></progress></li>
+		      <li><progress></progress></li>
+		    
+		     
+		    </ul>
+		    <ul>
+		      <li class="meter-element"><meter value="4" min="0" max="100" low="25" high="75" optimum="15"></meter></li>
+		      <li class="meter-element"><meter value="4" min="0" max="100" low="25" high="75" optimum="15"></meter></li>
+		    
+		    
+		    </ul>
+		    </form>
+		    </div>
+		  </section>
+         
+	</div> 
+</div>    
 
-		<div off-canvas="slidebar-4 bottom overlay">
-        <h1>Overlay</h1>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-			<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
-		</div>
+<div off-canvas="slidebar-1 left reveal">
+<h1>Reveal</h1>
+	<p>Slidebar with id 'slidebar-1' on the left side and reveal style.</p>
+</div>
+
+<div off-canvas="slidebar-2 right shift">
+ <h1>Shift</h1>
+	<p>Slidebar with id 'slidebar-2' on the right side and shift style.</p>
+</div>
+
+<div off-canvas="slidebar-3 top push">
+<h1>Push</h1>
+	<p>Slidebar with id 'slidebar-3' on the top and push style.</p>
+</div>
+
+<div off-canvas="slidebar-4 bottom overlay">
+<h1>Overlay</h1>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+	<p>Slidebar with id 'slidebar-4' on the bottom and overlay style.</p>
+</div>
 
     
       <!--  JQUERY -->

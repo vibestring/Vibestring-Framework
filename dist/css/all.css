@@ -1,3 +1,4 @@
+/* RESET CSS */
 html,
 body {
   border: 0;
@@ -111,6 +112,17 @@ a img {
 :focus {
   outline: 0;
 }
+/* ///// CLEARFIX ///// */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
 /* COPYRIGHT 2016 VIBE STRING. */
 /*** MIXINS EXAMPLE ***/
 .mybackground {
@@ -119,33 +131,6 @@ a img {
   background-image: -moz-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
   background-image: -o-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
   background-image: linear-gradient(to bottom, #fb83fa 0%, #e93cec 100%);
-}
-/*** GRID TESTING / DEBUGGING
-			
-	VISUALIZING THE GRID // UNCOMMENT THIS IF YOU WANT TO SEE THE GRID AND SIZES.  ***/
-body {
-  background-color: #ddd;
-}
-.col {
-  border: 1px #ddd solid;
-  font-size: 10px;
-}
-.col:nth-child(odd) {
-  background: #fff;
-}
-.col:nth-child(even) {
-  background: #eee;
-}
-.row {
-  margin-left: 0.74074%;
-}
-.row > [class*='col']:last-of-type {
-  margin-right: 0;
-}
-#widths {
-  text-align: center;
-  padding: 20px;
-  font-size: 3em;
 }
 /*** GRID ***/
 .col {
@@ -253,6 +238,47 @@ body {
   }
 }
 /*** END GRID ***/
+/* ///// EVERYTHING BELOW THIS FOR DEPLOYMENT PURPOSES ///// VISUALIZE / DEBUGGING */
+html,
+body,
+#content,
+.inner-hd {
+  height: 100%;
+}
+body .col {
+  border: 1px #ddd solid;
+  font-size: 10px;
+}
+body .col:nth-child(odd) {
+  background: #fff;
+}
+body .col:nth-child(even) {
+  background: #eee;
+}
+body .row {
+  margin-left: 0.74074%;
+}
+body .row > [class*='col']:last-of-type {
+  margin-right: 0;
+}
+body #widths {
+  padding: 20px;
+}
+/* //////// THEME STYLES //////// */
+/* ///// COLORS /////*/
+/* ///// FORMS ///// */
+/* ///// FONTS /////// */
+/* ///// MENU NAVIGATION ///// */
+#content .inner-hd section {
+  background: inherit;
+}
+#content .inner-hd h2 {
+  font-size: 3em;
+  text-align: center;
+}
+#content .inner-hd section {
+  padding: 50px 0;
+}
 html,
 body,
 [canvas=container],
@@ -270,36 +296,38 @@ body {
   overflow: hidden;
   color: inherit;
 }
+#content {
+  background: #fff;
+}
+.menu-visible,
+.menu-visible > div {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
+#over.over-sb-active {
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 11;
+  background-color: #131313;
+}
 /**
  * Canvas
  */
 [canvas] {
   z-index: 1;
-  /* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
-}
-[canvas].js-close-any-slidebar .inner-hd div,
-[canvas].js-close-any-slidebar .inner-hd p,
-[canvas].js-close-any-slidebar .inner-hd li,
-[canvas].js-close-any-slidebar .inner-hd a,
-[canvas].js-close-any-slidebar .inner-hd span {
-  opacity: 0.9;
-  color: #fff !important;
 }
 [canvas] #over {
-  background: #fff;
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
-}
-[canvas] #over.over-sb-active {
-  opacity: 0.9;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  position: fixed;
-  z-index: 0;
-  background-color: #131313;
 }
 [canvas=container] {
   width: 100%;
@@ -514,13 +542,26 @@ header {
 }
 /* //////// FIXED OVERLAY MENU  ///////// */
 /* //// CONTENT WHILE MENU IS ACTIVE //// */
-#content.menu-over {
+.menu-over {
   -webkit-transition: background-color 0.25s ease;
   -moz-transition: background-color 0.25s ease;
   -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
+  /* &:before, &:after {	
+			background-color: @content-bg;
+			position: fixed;
+			z-index: 11;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			.transition(background-color .25s ease);	
+			clear: both;
+
+			} */
 }
-#content.menu-over:before {
+.menu-over #over {
   background-color: #E80C7A;
   position: fixed;
   z-index: 11;
@@ -528,10 +569,9 @@ header {
   height: 100%;
   top: 0;
   left: 0;
-  -webkit-transition: background-color 0.25s ease;
-  -moz-transition: background-color 0.25s ease;
-  -o-transition: background-color 0.25s ease;
-  transition: background-color 0.25s ease;
+  bottom: 0;
+  display: block;
+  clear: both;
 }
 /* //////// OVERLAYED MENU //////// */
 header.menu-fixed {
@@ -631,4 +671,162 @@ header.menu-fixed nav ul a {
 }
 header.menu-fixed nav li {
   list-style: none;
+}
+/* ////// YOU BETTER BELIEVE IT /////// */
+body,
+div,
+table,
+td,
+li,
+ul,
+p,
+span,
+b,
+a,
+section,
+main,
+nav,
+aside,
+footer {
+  font-size: 100%;
+  line-height: 1.25;
+}
+form {
+  font-size: 2.5em;
+}
+form input {
+  display: block;
+  margin: 0.3em 0 0 0;
+  padding: 0.5em 1em 0.5em 0.7em;
+  width: calc(98%);
+  border: transparent 1px solid;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+form input[type='email'],
+form input[type='number'],
+form input[type='password'],
+form input[type='search'],
+form input[type='tel'],
+form input[type='text'],
+form input[type='url'],
+form textarea,
+form select {
+  height: 3.8rem;
+  padding: .6rem 1rem;
+  width: 100%;
+  font-size: 1em;
+}
+form .solid .button:hover,
+form .solid .button:focus,
+form .solid button:hover,
+form .solid button:focus,
+form .solid input[type='text']:hover,
+form .solid input[type='text']:focus,
+form .solid input[type='button']:hover,
+form .solid input[type='button']:focus,
+form .solid input[type='reset']:hover,
+form .solid input[type='reset']:focus,
+form .solid input[type='submit']:hover,
+form .solid input[type='submit']:focus {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+form .outlined input[type='email'],
+form .outlined input[type='number'],
+form .outlined input[type='password'],
+form .outlined input[type='search'],
+form .outlined input[type='tel'],
+form .outlined input[type='text'],
+form .outlined input[type='url'],
+form .outlined textarea,
+form .outlined select {
+  border: #777 1px solid;
+  background-color: #fff;
+}
+form .outlined .button:hover,
+form .outlined .button:focus,
+form .outlined button:hover,
+form .outlined button:focus,
+form .outlined input[type='text']:hover,
+form .outlined input[type='text']:focus,
+form .outlined input[type='button']:hover,
+form .outlined input[type='button']:focus,
+form .outlined input[type='reset']:hover,
+form .outlined input[type='reset']:focus,
+form .outlined input[type='submit']:hover,
+form .outlined input[type='submit']:focus {
+  border: #FF0DFF 1px solid;
+}
+form input[type='submit'] {
+  width: auto;
+  font-size: 0.8em;
+}
+form .fields {
+  position: relative;
+}
+/* ///// EVERYTHING BELOW THIS FOR DEPLOYMENT PURPOSES ///// */
+.dev-title-header {
+  padding: 100px;
+  text-align: center;
+}
+code,
+pre {
+  margin: 0;
+}
+.elements ul {
+  margin: 21px 0 0;
+  overflow: hidden;
+  padding: 21px 0 0;
+  border-top: 1px solid #eee;
+}
+.elements li {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+}
+.elements li:nth-child(1),
+.elements li:nth-child(2) {
+  margin-bottom: 21px;
+}
+.elements li .markup {
+  display: block;
+  min-width: 320px;
+  font-family: -apple-system, '.SFNSText-Regular', 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
+  color: gray;
+  line-height: 21px;
+  margin: 0;
+}
+.elements .heading {
+  display: none;
+}
+.elements fieldset {
+  max-width: 70%;
+}
+@media screen and (min-width: 1060px) {
+  .fb-like {
+    margin: 30px 0 0;
+  }
+  .elements li {
+    float: left;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+  .elements li:first-child,
+  .elements li:nth-child(2) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .elements .heading {
+    display: block;
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .elements .heading li {
+    padding: 0 50px;
+    font-family: -apple-system, '.SFNSText-Regular', 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
+    color: gray;
+  }
 }

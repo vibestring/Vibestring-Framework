@@ -16,6 +16,32 @@ html, body {
   color: inherit;
 }
 
+#content {
+  background: #fff;
+}
+
+.menu-visible, .menu-visible > div  {
+  
+   overflow-x: hidden; 
+    overflow-y: auto;
+}
+
+
+/* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
+    #over.over-sb-active {
+
+      opacity: 0.9;
+      height: 100%;
+      width:  100%;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      z-index: 11;        
+      background-color: @dark;
+    }
+
 /**
  * Canvas
  */
@@ -23,35 +49,19 @@ html, body {
 [canvas] {
   z-index: 1;
 
-  		&.js-close-any-slidebar {
-				
+  		&.js-close-any-slidebar {				
 
 			.inner-hd {
-				div, p, li, a, span {
-					opacity: 0.9;
-					color: #fff !important;
+				div, p, li, a, span {					
 				}
 			}		
 		}
-		#over {
-			background: #fff;
+		#over {		
 			.transition(background .5 ease);
 		}
 
-		/* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
-		#over.over-sb-active {
-
-			opacity: 0.9;
-			height: 100%;
-			width:  100%;
-			top:0;
-			position: fixed;
-			z-index: 0;				
-			background-color: @dark;
-		}
+	
 }
-
-
 
 [canvas=container] {
   width: 100%;

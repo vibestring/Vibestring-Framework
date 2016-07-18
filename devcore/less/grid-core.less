@@ -6,35 +6,9 @@
 /*** MIXINS EXAMPLE ***/ 
 
 	.mybackground {
-		.background-image (linear-gradient(to bottom, #fb83fa 0%,#e93cec 100%));
+		.background-image(linear-gradient(to bottom, #fb83fa 0%,#e93cec 100%));
 	}
 
-/*** GRID TESTING / DEBUGGING
-			
-	VISUALIZING THE GRID // UNCOMMENT THIS IF YOU WANT TO SEE THE GRID AND SIZES.  ***/
-
-	body {background-color: #ddd;}
-	.col {
-		border: 1px #ddd solid;			
-		font-size: 10px;	
-	}
-	.col:nth-child(odd) {
-		background: @white;
-	}
-	.col:nth-child(even) {
-		background: #eee;
-	}
-	
-	.row {
-		margin-left: @gutter-size;
-		> [class*='col']:last-of-type {
-			margin-right: 0;
-		}
-	}
-	
-	#widths {text-align: center;  
-		padding: 20px; 
-		font-size: 3em;}
 
 /*** GRID ***/
 
@@ -68,6 +42,8 @@
 	.col-14-16 {width: @col-14; margin-right: @gutter-size}
 	.col-15-16 {width: @col-15; margin-right: @gutter-size}
 	.col-16-16 {width: @col-16;}
+
+
 
 /*** GRID BREAK POINTS ***/
 
@@ -108,3 +84,36 @@
 	}
 
 /*** END GRID ***/
+
+/* ///// EVERYTHING BELOW THIS FOR DEPLOYMENT PURPOSES ///// VISUALIZE / DEBUGGING */
+
+
+html, body, #content, .inner-hd {
+	height: 100%;
+}
+
+body {
+
+
+	.col {
+		border: 1px #ddd solid;			
+		font-size: 10px;	
+	}
+	.col:nth-child(odd) {
+		background: @white;
+	}
+	.col:nth-child(even) {
+		background: #eee;
+	}
+	
+	.row {
+		margin-left: @gutter-size;
+		> [class*='col']:last-of-type {
+			margin-right: 0;
+		}
+	}
+	
+	#widths {		
+		padding: 20px; 
+	}
+}
