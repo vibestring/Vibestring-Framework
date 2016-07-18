@@ -1,0 +1,110 @@
+
+/* COPYRIGHT 2016 VIBE STRING. */
+
+
+
+/*** MIXINS EXAMPLE ***/ 
+
+	.mybackground {
+		.background-image (linear-gradient(to bottom, #fb83fa 0%,#e93cec 100%));
+	}
+
+/*** GRID TESTING / DEBUGGING
+			
+	VISUALIZING THE GRID // UNCOMMENT THIS IF YOU WANT TO SEE THE GRID AND SIZES.  ***/
+
+	body {background-color: #ddd;}
+	.col {
+		border: 1px #ddd solid;			
+		font-size: 10px;	
+	}
+	.col:nth-child(odd) {
+		background: @white;
+	}
+	.col:nth-child(even) {
+		background: #eee;
+	}
+	
+	.row {
+		margin-left: @gutter-size;
+		> [class*='col']:last-of-type {
+			margin-right: 0;
+		}
+	}
+	
+	#widths {text-align: center;  
+		padding: 20px; 
+		font-size: 3em;}
+
+/*** GRID ***/
+
+	.col {		
+		clear: none;
+		display: inline;
+		float: left;
+		margin-bottom: 10px;
+		margin-right:0.74075%;
+		overflow:hidden;
+		padding: 0;
+		position: relative;		
+	}
+	.content {
+			padding: @cell-pad;
+	}
+
+	.col-1-16 {width: @col-1; margin-right: @gutter-size}
+	.col-2-16 {width: @col-2; margin-right: @gutter-size}
+	.col-3-16 {width: @col-3; margin-right: @gutter-size}
+	.col-4-16 {width: @col-4; margin-right: @gutter-size}
+	.col-5-16 {width: @col-5; margin-right: @gutter-size}
+	.col-6-16 {width: @col-6; margin-right: @gutter-size}
+	.col-7-16 {width: @col-7; margin-right: @gutter-size}
+	.col-8-16 {width: @col-8; margin-right: @gutter-size}
+	.col-9-16 {width: @col-9; margin-right: @gutter-size}
+	.col-10-16 {width: @col-10; margin-right: @gutter-size}
+	.col-11-16 {width: @col-11; margin-right: @gutter-size}
+	.col-12-16 {width: @col-12; margin-right: @gutter-size}
+	.col-13-16 {width: @col-13; margin-right: @gutter-size}
+	.col-14-16 {width: @col-14; margin-right: @gutter-size}
+	.col-15-16 {width: @col-15; margin-right: @gutter-size}
+	.col-16-16 {width: @col-16;}
+
+/*** GRID BREAK POINTS ***/
+
+	.container {
+			width: @grid-full;
+			clear: both;
+			margin: 0 auto
+		}
+
+	@media (max-width: @grid-point-large) {
+
+		.container {
+			width: @grid-default;
+			clear: both;
+			margin: 0 auto
+		}
+	}	
+
+	@media (max-width: @grid-point-mid) {
+
+		.container {
+			width: @grid-sm-screen;
+		}
+	}
+
+	@media (max-width: @grid-point-small) {
+
+		.container {
+			width: @grid-ipad;
+		}
+	}
+
+	@media (max-width: @grid-point-x-small) {
+
+		.container {
+			width: @grid-mobile;
+		}
+	}
+
+/*** END GRID ***/

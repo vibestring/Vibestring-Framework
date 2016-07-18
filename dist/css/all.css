@@ -1,0 +1,634 @@
+html,
+body {
+  border: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+div,
+span,
+object,
+iframe,
+img,
+table,
+caption,
+thead,
+tbody,
+tfoot,
+tr,
+tr,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+hgroup,
+menu,
+nav,
+footer,
+header,
+section,
+summary,
+mark,
+audio,
+video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cit,
+code,
+del,
+dfn,
+em,
+ins,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+b,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+legend,
+label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article,
+aside,
+canvas,
+figure,
+figure img,
+figcaption,
+hgroup,
+footer,
+header,
+nav,
+section,
+audio,
+video {
+  display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table caption,
+table th,
+table td {
+  text-align: left;
+  vertical-align: middle;
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+/* COPYRIGHT 2016 VIBE STRING. */
+/*** MIXINS EXAMPLE ***/
+.mybackground {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmYjgzZmEiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2U5M2NlYyIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+  background-image: -webkit-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background-image: -moz-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background-image: -o-linear-gradient(top, #fb83fa 0%, #e93cec 100%);
+  background-image: linear-gradient(to bottom, #fb83fa 0%, #e93cec 100%);
+}
+/*** GRID TESTING / DEBUGGING
+			
+	VISUALIZING THE GRID // UNCOMMENT THIS IF YOU WANT TO SEE THE GRID AND SIZES.  ***/
+body {
+  background-color: #ddd;
+}
+.col {
+  border: 1px #ddd solid;
+  font-size: 10px;
+}
+.col:nth-child(odd) {
+  background: #fff;
+}
+.col:nth-child(even) {
+  background: #eee;
+}
+.row {
+  margin-left: 0.74074%;
+}
+.row > [class*='col']:last-of-type {
+  margin-right: 0;
+}
+#widths {
+  text-align: center;
+  padding: 20px;
+  font-size: 3em;
+}
+/*** GRID ***/
+.col {
+  clear: none;
+  display: inline;
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 0.74075%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+.content {
+  padding: 20px;
+}
+.col-1-16 {
+  width: 4.81426%;
+  margin-right: 0.74074%;
+}
+.col-2-16 {
+  width: 11.11026%;
+  margin-right: 0.74074%;
+}
+.col-3-16 {
+  width: 17.40726%;
+  margin-right: 0.74074%;
+}
+.col-4-16 {
+  width: 23.70326%;
+  margin-right: 0.74074%;
+}
+.col-5-16 {
+  width: 29.99926%;
+  margin-right: 0.74074%;
+}
+.col-6-16 {
+  width: 36.29626%;
+  margin-right: 0.74074%;
+}
+.col-7-16 {
+  width: 42.59226%;
+  margin-right: 0.74074%;
+}
+.col-8-16 {
+  width: 48.88826%;
+  margin-right: 0.74074%;
+}
+.col-9-16 {
+  width: 55.18426%;
+  margin-right: 0.74074%;
+}
+.col-10-16 {
+  width: 61.48126%;
+  margin-right: 0.74074%;
+}
+.col-11-16 {
+  width: 67.77726%;
+  margin-right: 0.74074%;
+}
+.col-12-16 {
+  width: 74.07326%;
+  margin-right: 0.74074%;
+}
+.col-13-16 {
+  width: 80.37026%;
+  margin-right: 0.74074%;
+}
+.col-14-16 {
+  width: 86.66626%;
+  margin-right: 0.74074%;
+}
+.col-15-16 {
+  width: 92.96226%;
+  margin-right: 0.74074%;
+}
+.col-16-16 {
+  width: 98.666668%;
+}
+/*** GRID BREAK POINTS ***/
+.container {
+  width: 1700px;
+  clear: both;
+  margin: 0 auto;
+}
+@media (max-width: 1850px) {
+  .container {
+    width: 1200px;
+    clear: both;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1350px) {
+  .container {
+    width: 824px;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    width: 550px;
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    width: 350px;
+  }
+}
+/*** END GRID ***/
+html,
+body,
+[canvas=container],
+[off-canvas] {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: inherit;
+}
+/**
+ * Canvas
+ */
+[canvas] {
+  z-index: 1;
+  /* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
+}
+[canvas].js-close-any-slidebar .inner-hd div,
+[canvas].js-close-any-slidebar .inner-hd p,
+[canvas].js-close-any-slidebar .inner-hd li,
+[canvas].js-close-any-slidebar .inner-hd a,
+[canvas].js-close-any-slidebar .inner-hd span {
+  opacity: 0.9;
+  color: #fff !important;
+}
+[canvas] #over {
+  background: #fff;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+[canvas] #over.over-sb-active {
+  opacity: 0.9;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 0;
+  background-color: #131313;
+}
+[canvas=container] {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  background-color: inherit;
+  /* Basic background color, overwrite this in your own css. */
+  -webkit-overflow-scrolling: touch;
+  /* Enables momentum scrolling on iOS devices, may be removed by setting to 'auto' in your own CSS. */
+}
+[canvas=container]:before,
+[canvas=container]:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+/**
+ * Off-Canavs
+ */
+[off-canvas] {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: #131313;
+  /* Basic background color, overwrite this in your own css. */
+  color: #fff;
+  /* Basic colors, overwrite this in your own css. */
+  -webkit-overflow-scrolling: touch;
+  /* Enables momentum scrolling on iOS devices, may be removed by setting to 'auto' in your own CSS. */
+}
+[off-canvas*=top] {
+  width: 100%;
+  top: 0;
+}
+[off-canvas*=right] {
+  width: 255px;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+[off-canvas*=bottom] {
+  width: 100%;
+  bottom: 0;
+}
+[off-canvas*=left] {
+  width: 255px;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+[off-canvas*=reveal] {
+  z-index: 0;
+}
+[off-canvas*=push] {
+  z-index: 1;
+}
+[off-canvas*=overlay] {
+  z-index: 9999;
+  bottom: 0;
+}
+[off-canvas*=shift] {
+  z-index: 0;
+}
+/**
+ * Animation
+ */
+[canvas],
+[off-canvas] {
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  -webkit-backface-visibility: hidden;
+  /* Prevents flickering, may be removed if experiencing problems with fixed background images in Chrome. */
+}
+[off-canvas*=shift][off-canvas*=top] {
+  -webkit-transform: translate(0px, 50%);
+  transform: translate(0px, 50%);
+}
+[off-canvas*=shift][off-canvas*=right] {
+  -webkit-transform: translate(-50%, 0px);
+  transform: translate(-50%, 0px);
+}
+[off-canvas*=shift][off-canvas*=bottom] {
+  -webkit-transform: translate(0px, -50%);
+  transform: translate(0px, -50%);
+}
+[off-canvas*=shift][off-canvas*=left] {
+  -webkit-transform: translate(50%, 0px);
+  transform: translate(50%, 0px);
+}
+/**
+ * Print
+ */
+@media print {
+  [canvas] {
+    -webkit-transform: translate(0px, 0px) !important;
+    -ms-transform: translate(0px, 0px) !important;
+    transform: translate(0px, 0px) !important;
+  }
+  [off-canvas] {
+    display: none !important;
+  }
+}
+[off-canvas] {
+  padding: 10px 20px;
+  padding-top: 5%;
+}
+[class*=js-] {
+  cursor: pointer;
+}
+/*** HEADER ***/
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+/*** NAVIGATION ***/
+/** 3 BARS ICON **/
+.toggle {
+  float: right;
+  margin-right: 10px;
+  display: block;
+  padding: 0.6em 1em 0.6em 1em;
+  /* ////// MENU ICON /////// */
+}
+.toggle > span {
+  padding: 0.6em 1em 0.6em 1em;
+  float: left;
+}
+.toggle .menu-icon {
+  cursor: pointer;
+  height: 2.5em;
+  width: 2.5em;
+  float: left;
+  position: relative;
+}
+.toggle .menu-icon:hover span {
+  background: #E80C7A;
+}
+.toggle .menu-icon:hover span:before {
+  background: #E80C7A;
+}
+.toggle .menu-icon:hover span:after {
+  background: #E80C7A;
+}
+.toggle .menu-icon > span {
+  background-color: #777;
+  border-radius: 3px;
+  display: block;
+  height: 0.25em;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+.toggle .menu-icon > span:before {
+  background-color: #777;
+  border-radius: 3px;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-0.75em);
+  -webkit-transform: translateY(-0.75em);
+  -webkit-transition: background-color 0.1s ease;
+  -moz-transition: background-color 0.1s ease;
+  -o-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease;
+}
+.toggle .menu-icon > span:after {
+  background-color: #777;
+  border-radius: 3px;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(0.75em);
+  -webkit-transform: translateY(0.75em);
+  -webkit-transition: background-color 0.4s ease;
+  -moz-transition: background-color 0.4s ease;
+  -o-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+/*** CLOSE BTN ****/
+.close-btn {
+  color: #777;
+  font: 3em/100% arial, sans-serif;
+  font-weight: 100;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  text-decoration: none;
+  z-index: 11;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  -o-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+.close-btn:hover {
+  color: #E80C7A;
+}
+.close-btn:after {
+  content: 'X';
+  /* ANSI X letter */
+}
+/* //////// FIXED OVERLAY MENU  ///////// */
+/* //// CONTENT WHILE MENU IS ACTIVE //// */
+#content.menu-over {
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+#content.menu-over:before {
+  background-color: #E80C7A;
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+/* //////// OVERLAYED MENU //////// */
+header.menu-fixed {
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+header.menu-fixed .inner {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+header.menu-fixed .inner .container {
+  max-width: 350px;
+}
+header.menu-fixed.sidebar-is-active {
+  z-index: -1;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+header.menu-fixed > .inner,
+header.menu-fixed .container,
+header.menu-fixed .row,
+header.menu-fixed nav {
+  height: 100%;
+}
+header.menu-fixed .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto 0;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+header.menu-fixed .row p {
+  padding: 10%;
+  color: #fff;
+}
+header.menu-fixed nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 350px;
+  max-height: 350px;
+  min-height: 350px;
+}
+header.menu-fixed nav ul {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -webkit-flex: 0 3 auto;
+  -ms-flex: 0 3 auto;
+  flex: 0 3 auto;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 0 auto;
+  color: #fff;
+}
+header.menu-fixed nav ul a {
+  padding: 10px;
+  display: block;
+  font-size: 2em;
+  font-weight: 200;
+  text-decoration: none;
+  color: #E80C7A;
+}
+header.menu-fixed nav li {
+  list-style: none;
+}
