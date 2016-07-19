@@ -94,26 +94,27 @@ html, body, #content, .inner-hd {
 
 body {
 
-
-	.col {
-		border: 1px #ddd solid;			
-		font-size: 10px;	
-	}
-	.col:nth-child(odd) {
-		background: @white;
-	}
-	.col:nth-child(even) {
-		background: #eee;
-	}
-	
-	.row {
-		margin-left: @gutter-size;
-		> [class*='col']:last-of-type {
-			margin-right: 0;
+	.grid  {
+		.col {
+			border: 1px #ddd solid;			
+			font-size: 10px;	
 		}
-	}
-	
-	#widths {		
-		padding: 20px; 
+		.col:nth-child(odd) {
+			background: @white;
+		}
+		.col:nth-child(even) {
+			background: #eee;
+		}
+		
+		.row {
+			margin-left: @gutter-size;
+			> [class*='col']:last-of-type {
+				margin-right: 0;
+			}
+		}
+		
+		#widths {		
+			padding: 20px; 
+		}
 	}
 }

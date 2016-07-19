@@ -10,12 +10,15 @@
 	@dark: #131313;
 
 
-	@main-color: #FF540D;
-	@second-color: #E82C0C;
-	@third-color: #FF0000;
-	@fourth-color: #E80C7A;
-	@fifth-color: #FF0DFF;
-	@overlay-color: #3c031f;
+	@main-color: #FF540D;   /* ///   RGB 255, 84, 13   /// */
+	@second-color: #E82C0C;  /* ///  RGB 232, 44, 12   /// */
+	@third-color: #FF0000;  /* ///   RGB 255, 0, 0     /// */
+	@fourth-color: #E80C7A;  /* ///  RGB 232, 12, 122   /// */
+	@fifth-color: #FF0DFF;  /* ///   RGB 255, 13, 255   /// */
+	
+	@main-overlay-color: #5b1e05; /* ///  RGB 90, 31, 5   /// */
+	@fourth-overlay-color: #3c031f; /* ///  RGB 60, 3, 31   /// */
+
 
 	@color1: @main-color;
 	@color2: @second-color;
@@ -23,28 +26,39 @@
 	@color4: @fourth-color;
 	@color5: @fifth-color;
 
+	/* ///// COLOR SCHEME LEGEND /////
+
+	.color-1 = orange;
+	.color-2 = burnt orange;
+	.color-3 = red;
+	.color-4 = hot pink;
+	.color-5 = light pink;
+	.color-w = white;
+
+	 */
+
 
 	/* ///// FORMS ///// */
 
-	@form-field-border-color: @gray; 
-	@form-field-focus-border-color: @fifth-color; 
+	@form-field-border-color: rgba(90,31,5,0.2);
+	@form-field-focus-border-color: @color1; 
+	@form-input-solid-color: rgba(90,31,5,0.3); 
+	@form-input-box-color: rgba(90,31,5,0.1);
+	@form-button-color: rgba(255,84,13,0.8);
 
 	/* ///// FONTS /////// */
 
 	@big: 2em;
 
 	/* ///// MENU NAVIGATION ///// */ 
-	
+
 	@menu-btn: @gray; 
-	@menu-btn-over: @color4;
-	@content-bg: @color4;
-	@menu-border: @color4;
-	@menu-font-color: @color4; 
+	@menu-btn-over: @color1;
+	@content-bg: @color1;
+	@menu-border: @color1;
+	@menu-font-color: @color1; 
 	@menu-font-size: @big; 
 	@menu-width: 350px; 
-
-
-
 
 
 #content {

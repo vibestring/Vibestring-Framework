@@ -245,27 +245,44 @@ body,
 .inner-hd {
   height: 100%;
 }
-body .col {
+body .grid .col {
   border: 1px #ddd solid;
   font-size: 10px;
 }
-body .col:nth-child(odd) {
+body .grid .col:nth-child(odd) {
   background: #fff;
 }
-body .col:nth-child(even) {
+body .grid .col:nth-child(even) {
   background: #eee;
 }
-body .row {
+body .grid .row {
   margin-left: 0.74074%;
 }
-body .row > [class*='col']:last-of-type {
+body .grid .row > [class*='col']:last-of-type {
   margin-right: 0;
 }
-body #widths {
+body .grid #widths {
   padding: 20px;
 }
 /* //////// THEME STYLES //////// */
 /* ///// COLORS /////*/
+/* ///   RGB 255, 84, 13   /// */
+/* ///  RGB 232, 44, 12   /// */
+/* ///   RGB 255, 0, 0     /// */
+/* ///  RGB 232, 12, 122   /// */
+/* ///   RGB 255, 13, 255   /// */
+/* ///  RGB 90, 31, 5   /// */
+/* ///  RGB 60, 3, 31   /// */
+/* ///// COLOR SCHEME LEGEND /////
+
+	.color-1 = orange;
+	.color-2 = burnt orange;
+	.color-3 = red;
+	.color-4 = hot pink;
+	.color-5 = light pink;
+	.color-w = white;
+
+	 */
 /* ///// FORMS ///// */
 /* ///// FONTS /////// */
 /* ///// MENU NAVIGATION ///// */
@@ -305,23 +322,11 @@ body {
   overflow-y: auto;
 }
 /* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
-#over.over-sb-active {
-  opacity: 0.9;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  z-index: 11;
-  background-color: #131313;
-}
 /**
  * Canvas
  */
 [canvas] {
-  z-index: 1;
+  z-index: 12;
 }
 [canvas] #over {
   -webkit-transition: background 0.5s ease;
@@ -338,6 +343,41 @@ body {
   /* Basic background color, overwrite this in your own css. */
   -webkit-overflow-scrolling: touch;
   /* Enables momentum scrolling on iOS devices, may be removed by setting to 'auto' in your own CSS. */
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: -webkit-transform,-moz-transform,-o-transform,transform;
+}
+[canvas=container].js-close-any-slidebar {
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: -webkit-transform,-moz-transform,-o-transform,transform;
+  -webkit-transition: background-color 0.25s ease;
+  -moz-transition: background-color 0.25s ease;
+  -o-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+  -webkit-transform: translate 0.25 ease;
+  -moz-transform: translate 0.25 ease;
+  -o-transform: translate 0.25 ease;
+  -ms-transform: translate 0.25 ease;
+  transform: translate 0.25 ease;
+  background-color: #333 !important;
+}
+[canvas=container].js-close-any-slidebar .inner-hd div,
+[canvas=container].js-close-any-slidebar .inner-hd p,
+[canvas=container].js-close-any-slidebar .inner-hd li,
+[canvas=container].js-close-any-slidebar .inner-hd a,
+[canvas=container].js-close-any-slidebar .inner-hd span,
+[canvas=container].js-close-any-slidebar .inner-hd h1,
+[canvas=container].js-close-any-slidebar .inner-hd h2,
+[canvas=container].js-close-any-slidebar .inner-hd h3,
+[canvas=container].js-close-any-slidebar .inner-hd form,
+[canvas=container].js-close-any-slidebar .inner-hd b,
+[canvas=container].js-close-any-slidebar .inner-hd button,
+[canvas=container].js-close-any-slidebar .inner-hd input {
+  opacity: 0.3 !important;
+  color: #131313;
 }
 [canvas=container]:before,
 [canvas=container]:after {
@@ -446,13 +486,13 @@ body {
 header {
   position: absolute;
   width: 100%;
-  z-index: 2;
+  z-index: 13;
 }
 /*** BODY ***/
 body.menu-visible #over {
-  background-color: #E80C7A;
+  background-color: #FF540D;
   position: fixed;
-  z-index: 2;
+  z-index: 13;
   width: 100%;
   height: 100%;
   top: 0;
@@ -484,13 +524,13 @@ body.menu-visible #over {
   position: relative;
 }
 .toggle .menu-icon:hover span {
-  background: #E80C7A;
+  background: #FF540D;
 }
 .toggle .menu-icon:hover span:before {
-  background: #E80C7A;
+  background: #FF540D;
 }
 .toggle .menu-icon:hover span:after {
-  background: #E80C7A;
+  background: #FF540D;
 }
 .toggle .menu-icon > span {
   background-color: #777;
@@ -549,7 +589,7 @@ body.menu-visible #over {
   transition: color 0.4s ease;
 }
 .close-btn:hover {
-  color: #E80C7A;
+  color: #FF540D;
 }
 .close-btn:after {
   content: 'X';
@@ -588,7 +628,7 @@ header.menu-fixed .inner {
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 10;
+  z-index: 14;
   opacity: 0;
 }
 header.menu-fixed .inner .container {
@@ -670,7 +710,7 @@ header.menu-fixed nav ul a {
   font-size: 2em;
   font-weight: 200;
   text-decoration: none;
-  color: #E80C7A;
+  color: #FF540D;
 }
 header.menu-fixed nav li {
   list-style: none;
@@ -694,17 +734,57 @@ footer {
   font-size: 100%;
   line-height: 1.25;
 }
-form {
-  font-size: 2.5em;
+.container {
+  font-size: 12px;
 }
-form input {
+.container button[class*="js-"] {
+  background-color: rgba(255, 84, 13, 0.8);
+  color: #fff;
+  margin-top: 40px;
+  cursor: pointer;
+  margin: 0 0 50px 0;
+  width: auto;
+  font-size: 0.8em;
+  margin-right: 10px;
+  height: 3.8rem;
+  padding: .6rem 1rem;
+  font-size: 2em;
+  border: transparent;
+}
+form {
+  padding: 50px;
+  font-size: 2.5em;
+  max-width: 600px;
+  margin: 2% auto;
+  border: rgba(90, 31, 5, 0.2) 1px solid;
+}
+form h3 {
+  margin: 10px 0;
+}
+form ul {
+  margin: 10px;
+  margin-left: -25px;
+}
+form li {
+  list-style: none;
+  padding-bottom: 20px;
   display: block;
-  margin: 0.3em 0 0 0;
-  padding: 0.5em 1em 0.5em 0.7em;
-  width: calc(98%);
+}
+form input,
+form textarea,
+form select,
+form .upload,
+form button {
+  display: block;
+  padding: 1rem 3rem 1rem 3rem;
+  width: calc(100%);
   border: transparent 1px solid;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #333;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+form textarea {
+  min-height: 200px;
 }
 form input[type='email'],
 form input[type='number'],
@@ -717,119 +797,319 @@ form textarea,
 form select {
   height: 3.8rem;
   padding: .6rem 1rem;
-  width: 100%;
   font-size: 1em;
+  color: #333;
 }
-form .solid .button:hover,
-form .solid .button:focus,
-form .solid button:hover,
-form .solid button:focus,
-form .solid input[type='text']:hover,
-form .solid input[type='text']:focus,
-form .solid input[type='button']:hover,
-form .solid input[type='button']:focus,
-form .solid input[type='reset']:hover,
-form .solid input[type='reset']:focus,
-form .solid input[type='submit']:hover,
-form .solid input[type='submit']:focus {
-  background-color: rgba(0, 0, 0, 0.15);
+form .upload-file-path {
+  height: 2.5rem;
+  padding: .6rem;
+  font-size: 1em;
+  color: #333;
+  margin-top: 20px;
 }
-form .outlined input[type='email'],
-form .outlined input[type='number'],
-form .outlined input[type='password'],
-form .outlined input[type='search'],
-form .outlined input[type='tel'],
-form .outlined input[type='text'],
-form .outlined input[type='url'],
-form .outlined textarea,
-form .outlined select {
-  border: #777 1px solid;
-  background-color: #fff;
-}
-form .outlined .button:hover,
-form .outlined .button:focus,
-form .outlined button:hover,
-form .outlined button:focus,
-form .outlined input[type='text']:hover,
-form .outlined input[type='text']:focus,
-form .outlined input[type='button']:hover,
-form .outlined input[type='button']:focus,
-form .outlined input[type='reset']:hover,
-form .outlined input[type='reset']:focus,
-form .outlined input[type='submit']:hover,
-form .outlined input[type='submit']:focus {
-  border: #FF0DFF 1px solid;
-}
-form input[type='submit'] {
+form button {
+  color: #fff;
+  margin-top: 40px;
+  cursor: pointer;
+  margin: 0 0 50px 0;
   width: auto;
   font-size: 0.8em;
+  margin-right: 10px;
 }
-form .fields {
-  position: relative;
+form.form-box.solid .button:hover,
+form.form-box.solid .button:focus,
+form.form-box.solid button:hover,
+form.form-box.solid button:focus,
+form.form-box.solid input[type='text']:hover,
+form.form-box.solid input[type='text']:focus,
+form.form-box.solid input[type='button']:hover,
+form.form-box.solid input[type='button']:focus,
+form.form-box.solid input[type='reset']:hover,
+form.form-box.solid input[type='reset']:focus,
+form.form-box.solid input[type='submit']:hover,
+form.form-box.solid input[type='submit']:focus,
+form.form-box.solid .upload-file-path:focus,
+form.form-box.solid .upload-file-path :hover {
+  background: rgba(90, 31, 5, 0.3);
 }
-/* ///// EVERYTHING BELOW THIS FOR DEPLOYMENT PURPOSES ///// */
-.dev-title-header {
-  padding: 100px;
-  text-align: center;
+form.form-box.solid input,
+form.form-box.solid select,
+form.form-box.solid textarea,
+form.form-box.solid .upload-file-path {
+  background-color: rgba(90, 31, 5, 0.1);
 }
-code,
-pre {
-  margin: 0;
+form.form-box.solid input[type='button'],
+form.form-box.solid input[type='submit'],
+form.form-box.solid input[type='reset'],
+form.form-box.solid .upload {
+  background-color: rgba(255, 84, 13, 0.8);
 }
-.elements ul {
-  margin: 21px 0 0;
-  overflow: hidden;
-  padding: 21px 0 0;
-  border-top: 1px solid #eee;
+form.form-box.outlined .button:hover,
+form.form-box.outlined .button:focus,
+form.form-box.outlined button:hover,
+form.form-box.outlined button:focus,
+form.form-box.outlined input[type='text']:hover,
+form.form-box.outlined input[type='text']:focus,
+form.form-box.outlined input[type='button']:hover,
+form.form-box.outlined input[type='button']:focus,
+form.form-box.outlined input[type='reset']:hover,
+form.form-box.outlined input[type='reset']:focus,
+form.form-box.outlined input[type='submit']:hover,
+form.form-box.outlined input[type='submit']:focus {
+  border: #FF540D 1px solid;
 }
-.elements li {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0 20px;
-  list-style: none;
+form.form-box.outlined input,
+form.form-box.outlined textarea,
+form.form-box.outlined select,
+form.form-box.outlined .upload-file-path {
+  border: rgba(90, 31, 5, 0.2) 1px solid;
+  background: #fff;
 }
-.elements li:nth-child(1),
-.elements li:nth-child(2) {
-  margin-bottom: 21px;
+form.form-box.outlined input[type='button'],
+form.form-box.outlined input[type='submit'],
+form.form-box.outlined input[type='reset'],
+form.form-box.outlined .upload {
+  background-color: rgba(255, 84, 13, 0.8);
 }
-.elements li .markup {
-  display: block;
-  min-width: 320px;
-  font-family: -apple-system, '.SFNSText-Regular', 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
-  color: gray;
-  line-height: 21px;
-  margin: 0;
+form input[type='button'],
+form input[type='submit'],
+form input[type='reset'],
+form .upload {
+  color: #fff;
+  margin-top: 40px;
+  cursor: pointer;
+  margin: 20px 0 50px 0;
+  width: auto;
+  font-size: 0.8em;
+  float: left;
+  margin-right: 10px;
 }
-.elements .heading {
+form input[type="file"] {
   display: none;
 }
-.elements fieldset {
-  max-width: 70%;
+form .upload {
+  display: inline-block;
 }
-@media screen and (min-width: 1060px) {
-  .fb-like {
-    margin: 30px 0 0;
+form .upload-file-path {
+  display: inline-block;
+  min-width: 200px;
+  max-width: 800px
+		overflow: hidden;
+  text-align: right;
+}
+@media (max-width: 900px) {
+  form {
+    padding: 20px;
   }
-  .elements li {
+  form ul {
+    margin: 10px;
+    margin-left: 0;
+  }
+  form input[type='email'],
+  form input[type='number'],
+  form input[type='password'],
+  form input[type='search'],
+  form input[type='tel'],
+  form input[type='text'],
+  form input[type='url'],
+  form textarea,
+  form select {
+    height: 2.8rem;
+    padding: .4rem .4rem;
+    font-size: .8em;
+  }
+  form input[type='button'],
+  form input[type='submit'],
+  form input[type='reset'],
+  form .upload,
+  form input,
+  form textarea,
+  form select,
+  form .upload,
+  form button {
+    margin-top: 10px;
+    cursor: pointer;
+    margin: 5px 0;
+    font-size: 0.6em;
+  }
+  form .upload,
+  form button {
+    font-size: 0.6em;
+  }
+  form input[type='button'],
+  form input[type='submit'] {
     float: left;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
-  }
-  .elements li:first-child,
-  .elements li:nth-child(2) {
-    width: 50%;
-    margin-bottom: 0;
-  }
-  .elements .heading {
-    display: block;
-    border: none;
-    padding-top: 0;
-    margin-top: 0;
-  }
-  .elements .heading li {
-    padding: 0 50px;
-    font-family: -apple-system, '.SFNSText-Regular', 'Helvetica Neue', Roboto, 'Segoe UI', sans-serif;
-    color: gray;
   }
 }
+.fields {
+  position: relative;
+}
+/* /// radio + checkboxes /// */
+input[type=radio],
+input[type=checkbox] {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+}
+input[type=radio] + label.radio-label,
+input[type=checkbox] + label.check-label {
+  padding-left: 38px;
+  padding-right: 38px;
+  height: 33px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 33px;
+  line-height: normal;
+  cursor: pointer;
+}
+input[type=radio]:checked + label.radio-label,
+input[type=checkbox]:checked + label.check-label {
+  background-position: 0 -33px;
+}
+label.radio-label.color-1 {
+  background: url('../assets/circle-1.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio-label.color-2 {
+  background: url('../assets/circle-2.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio-label.color-3 {
+  background: url('../assets/circle-3.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio-label.color-4 {
+  background: url('../assets/circle-4.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio-label.color-5 {
+  background: url('../assets/circle-5.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.radio-label.color-w {
+  background: url('../assets/white-circle.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.check-label.color-1 {
+  background: url('../assets/square-1.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.check-label.color-2 {
+  background: url('../assets/square-2.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.check-label.color-3 {
+  background: url('../assets/square-3.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.check-label.color-4 {
+  background: url('../assets/square-4.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.check-label.color-5 {
+  background: url('../assets/square-5.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label.check-label.color-w {
+  background: url('../assets/white-square.php');
+  display: block;
+  text-indent: 15px;
+  background-size: 33px 66px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* ///// EVERYTHING BELOW THIS FOR DEPLOYMENT PURPOSES ///// */

@@ -26,7 +26,9 @@ $( document ).ready(function() {
 
         // CLOSE MENU  
         $("#close_menu").click(function() {
-              $(".toggle").show();
+
+              // MENU BG COLORS
+              $(".toggle").show();            
               $("body").removeClass("menu-visible");
               TweenMax.to(element, 0.5, {scale: 0.85, autoAlpha: 0, display: 'block'});    
              $("#content").removeClass("menu-over");   
@@ -41,7 +43,10 @@ $( document ).ready(function() {
                         if (!container.is(e.target) && container.has(e.target).length === 0)  
                     // ... or a child element of container ... CLOSE MENU
                         {   
+                          // MENU BG COLORS
                           $("body").removeClass("menu-visible");
+
+                          // MENU SHOW ICON
                            $(".toggle").show();
                            TweenMax.to(element, 0.5, {scale: 0.85, autoAlpha: 0, display: 'block'});    
                             $("#content").removeClass("menu-over");  

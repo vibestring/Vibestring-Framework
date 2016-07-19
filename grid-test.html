@@ -6,7 +6,7 @@
 <link href="dist/css/all.css" rel="stylesheet" />  	
 </head>
 <body>
-<div id="over"></div> 
+
  <header id="header" class="menu-fixed">
 	<div id="overlay" class="inner">
 	<a id="close_menu" href="#" class="close-btn"></a>
@@ -35,12 +35,14 @@
 			</div>
 			
 	</div>	
-			<div class="toggle"><span>Menu</span>
-				<div id="open-menu" class="menu-icon">
-					<span></span>
-				</div>
-			</div>
+	<div class="toggle"><span>Menu</span>
+		<div id="open-menu" class="menu-icon">
+			<span></span>
+		</div>
+	</div>
+	<div id="over"></div>
 </header> 
+
 <div id="content" canvas="container" class="menu-down clearfix">
 	<div class="inner-hd clearfix">
 			<section class="clearfix">
@@ -120,7 +122,7 @@
 	    	</section>
 		    <section class="clearfix">
 		       <h2 id="widths"></h2>
-			<div class="container">
+			<div class="container grid">
 				<div class="row">
 					<div class="col col-16-16"><div class="content">16-16</div></div>
 				</div>
@@ -160,188 +162,112 @@
 			</section>
 			<section class="elements clearfix">
 			<div class="container">
-			<h2 class="dev-title-header">Form Elements</h2>
-			<form>
-		    <ul class="heading">
-		      <li>Element</li>
-		      <li>Outlined Element</li>
-	
-		    </ul>
-		    <ul>
-		      <li class="fields solid"><input type="text" autofocus=""></li>
-		      <li class="field outlined"><input type="text" autofocus=""></li>
-		    </ul>
-		    <ul>
-		      <li class="fields solid"><input type="text"></li>	
-		      <li class="fields outlined"><input type="text"></li>		     
-		    </ul>
-		    <ul>
-		      <li class="fields solid"><input type="text" required=""><input type="submit"></li>	
-		       <li class="fields outlined"><input type="text" required=""><input type="submit"></li>			    
-		    </ul>
-		    <ul>
-		      <li class="fields solid"><input type="text"></li>		    
-		      <li class="fields outlined"><input type="text"></li>		    
-		    </ul>
-		    <ul>
-		      <li class="fields solid"><textarea></textarea></li>     
-		      <li class="fields outlined"><textarea></textarea></li>     
-		    </ul>
-		    <ul>
-		      <li class="feilds solid"><input type="password" placeholder="password"></li>	 
-		      <li class="feilds outlined"><input type="password" placeholder="password"></li>	 
-		    </ul>
-		    <ul>
-		      <li class="feilds solid"><input type="radio"></li>		 
-		      <li class="feilds"><input type="radio"></li>		 
-		    </ul>
-		    <ul>
-		      <li><input type="radio" checked=""></li>	    
-		      <li><input type="radio" checked=""></li>	    
-		    </ul>
-		    <ul>
-		      <li><input type="checkbox"></li>
-		      <li><input type="checkbox"></li>
-		    </ul>
-		    <ul>
-		      <li><input type="checkbox" checked=""></li>		    
-		      <li><input type="checkbox" checked=""></li>		    
-		    </ul>
-		    <ul>
-		      <li><select><option></option><option>Option 1</option></select></li>	     
-		      <li><select><option></option><option>Option 1</option></select></li>	     
-		    </ul>
-		    <ul>
-		      <li><select><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select></li> 	     
-		      <li><select><optgroup label="Option group 1"><option>Option 1</option><option>Option 2</option></optgroup><optgroup><option>Option 3</option></optgroup></select></li> 	     
-		    </ul>
-		    <ul>
-		      <li><input type="text" placeholder="placeholder"></li>
-		      <li><input type="text" placeholder="placeholder"></li>
+			<h2 class="dev-title-header">Basic Form Elements</h2>
+			<div class="col col-16-16">
+			<form class="form-box solid">
 		    
-		    </ul>
-		    <ul>
-		      <li><input type="search"></li>
-		      <li><input type="search"></li>
-		     
-		    </ul>
-		    <ul>
-		      <li><input type="file"></li>
-		      <li><input type="file"></li>
-		    
-		    </ul>
-		    <ul>
-		      <li><fieldset><legend>Legend</legend><label for="field">Label</label><input id="field"></fieldset></li>
-		      <li><fieldset><legend>Legend</legend><label for="field">Label</label><input id="field"></fieldset></li>
-		     
-		    </ul>
-		    <ul>
-		      <li><input type="submit"></li>
-		      <li><input type="submit"></li>
+		    <ul><h3 class="heading">Solid Elements</h3>
+		      <li><input type="text" placeholder="text field" autofocus=""></li>			   	    
 
-		    </ul>
-		    <ul>
-		      <li><button>Button</button></li>
-		      <li><button>Button</button></li>
+		      <li><input type="text" placeholder="text field required" required="">
 		      
-		    <ul>
-		      <li><input type="reset"></li>
-		      <li><input type="reset"></li>
-		     
-		    </ul>
-		    <ul>
-		      <li><input type="email"></li>
-		      <li><input type="email"></li>
-		      
-		    </ul>
-		    <ul>
-		      <li><input type="tel"></li>
-		      <li><input type="tel"></li>
-		     
-		    </ul>
-		    <ul>
-		      <li><input type="url"></li>
-		      <li><input type="url"></li>
-		      
-		    </ul>
-		    <ul>
-		      <li><input type="number"></li>
-		      <li><input type="number"></li>
-		      
-		    </ul>
-		    <ul>
-		      <li><input type="number" min="0" max="15" step="3"></li>
-		      <li><input type="number" min="0" max="15" step="3"></li>
-		     
-		    </ul>
-		    <ul>
-		      <li><input type="range"></li>
-		      <li><input type="range"></li>
-		      
-		    </ul>
-		    <ul>
-		      <li><input type="range" min="0" max="15" step="3"></li>
-		      <li><input type="range" min="0" max="15" step="3"></li>
+ 				<li><select><optgroup label="Option group 1">
+		      <option selected="true" disabled="disabled">Dropdown</option>
+		      <option>Option 1</option>
+		     <option>Option 2</option> </optgroup></select></li>	
+		      <input type="submit"> <input type="reset"></li>	
+		    
+		      <li><textarea placeholder="textarea field"></textarea></li> 
+		    
+		      <li><input type="radio"></li>	
+		    
+		      <li>
+		      	<input name="radio" id="radio1" type="radio">
+		      	<label for="radio1" class="radio-label color-1">Radio a</label>
+		      	<input name="radio" id="radio2" type="radio">
+		      	<label for="radio2" class="radio-label color-1">Radio b</label>
+		      	</li>       
+		    
+		      <li>
+			      <input type="checkbox" name="check1" id="check1">
+			      <label for="check1" class="check-label color-1">check 1</label>
+		          <input type="checkbox" name="check2" id="check2">
+			      <label for="check2" class="check-label color-1">check 2</label>
+		      </li>	
+		      <li> 
+		      <input id="file-type" type="file" size="4" name="file">
+		      <label id="upload-click" for="file-type" class="upload color-1">Upload</label>
+		       <div id="file-name" class="upload-file-path"></div>
+		      </li>		    
 
-		    </ul>
-		    <ul>
-		      <li><input type="date"></li>
-		      <li><input type="date"></li>
-		     
-		    </ul>
-		    <ul>
-		      <li><input type="month"></li>
-		      <li><input type="month"></li>
-		   
-		    </ul>
-		    <ul>
-		      <li><input type="week"></li>
-		      <li><input type="week"></li>
+		      <li><h3>Login Example</h3>
+		      	 <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+			        <p><input type="password" name="password" value="" placeholder="Password"></p>
+			        <p class="remember_me">			         
+			            <input class="" type="checkbox" name="remember_me" id="remember_me">	
+			             <label for="remember_me" class="check-label color-1">Remember me on this computer          
+			          </label>
+			        </p>
+			        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+		      </li>	
 		    
-		    </ul>
-		    <ul>
-		      <li><input type="time"></li>
-		      <li><input type="time"></li>
-		     
-		    </ul>
-		    <ul>
-		      <li><input type="datetime"></li>
-		      <li><input type="datetime"></li>
-		    </ul>
-		    <ul>
-		      <li><input type="datetime-local"></li>
-		      <li><input type="datetime-local"></li>
-		
-		    </ul>
-		    <ul>
-		      <li><input type="color"></li>
-		      <li><input type="color"></li>
-		   
-		    </ul>
-		    <ul>
-		      <li><input type="color" value="#ff3d3d"></li>
-		      <li><input type="color" value="#ff3d3d"></li>
+		      <li><button>Button</button></li>			    
 		    
-		    </ul>
-		    <ul>
-		      <li class="progress-element"><progress max="100" value="10"></progress></li>
-		      <li class="progress-element"><progress max="100" value="10"></progress></li>
-		    
-		   
-		    </ul>
-		    <ul>
-		      <li><progress></progress></li>
-		      <li><progress></progress></li>
-		    
-		     
-		    </ul>
-		    <ul>
-		      <li class="meter-element"><meter value="4" min="0" max="100" low="25" high="75" optimum="15"></meter></li>
-		      <li class="meter-element"><meter value="4" min="0" max="100" low="25" high="75" optimum="15"></meter></li>
-		    
-		    
-		    </ul>
+		    </ul>		   
 		    </form>
+		    </div>
+			<div class="col col-16-16">
+			<form class="form-box outlined">		    
+		    <ul><h3 class="heading">Solid Elements</h3>
+		      <li><input type="text" placeholder="text field" autofocus=""></li>			   	    
+
+		      <li><input type="text" placeholder="text field required" required="">
+		      
+ 				<li><select><optgroup label="Option group 1">
+		      <option selected="true" disabled="disabled">Dropdown</option>
+		      <option>Option 1</option>
+		     <option>Option 2</option> </optgroup></select></li>	
+		      <input type="submit"> <input type="reset"></li>	
+		    
+		      <li><textarea placeholder="textarea field"></textarea></li> 
+		    
+		      <li><input type="radio"></li>	
+		    
+		      <li>
+		      	<input name="radio" id="radio1" type="radio">
+		      	<label for="radio1" class="radio-label color-1">Radio a</label>
+		      	<input name="radio" id="radio2" type="radio">
+		      	<label for="radio2" class="radio-label color-1">Radio b</label>
+		      	</li>       
+		    
+		      <li>
+			      <input type="checkbox" name="check1" id="check1">
+			      <label for="check1" class="check-label color-1">check 1</label>
+		          <input type="checkbox" name="check2" id="check2">
+			      <label for="check2" class="check-label color-1">check 2</label>
+		      </li>	
+		      <li> 
+		      <input id="file-type2" type="file" size="4" name="file">
+		      <label id="upload-click" for="file-type2" class="upload color-1">Upload</label>
+		       <div id="file-name" class="upload-file-path"></div>
+		      </li>		    
+
+		      <li><h3>Login Example</h3>
+		      	 <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
+			        <p><input type="password" name="password" value="" placeholder="Password"></p>
+			        <p class="remember_me">			         
+			            <input class="" type="checkbox" name="remember_me" id="remember_me">	
+			             <label for="remember_me" class="check-label color-1">Remember me on this computer          
+			          </label>
+			        </p>
+			        <p class="submit"><input type="submit" name="commit" value="Login"></p>
+		      </li>	
+		    
+		      <li><button>Button</button></li>			    
+		    
+		    </ul>		   
+		    </form>
+		    </div>
 		    </div>
 		  </section>
          
