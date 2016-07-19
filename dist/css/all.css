@@ -448,6 +448,21 @@ header {
   width: 100%;
   z-index: 2;
 }
+/*** BODY ***/
+body.menu-visible #over {
+  background-color: #E80C7A;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  clear: both;
+  opacity: 0.75;
+}
 /*** NAVIGATION ***/
 /** 3 BARS ICON **/
 .toggle {
@@ -560,18 +575,6 @@ header {
 			clear: both;
 
 			} */
-}
-.menu-over #over {
-  background-color: #E80C7A;
-  position: fixed;
-  z-index: 11;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  display: block;
-  clear: both;
 }
 /* //////// OVERLAYED MENU //////// */
 header.menu-fixed {
