@@ -503,6 +503,21 @@ body.menu-visible #over {
   clear: both;
   opacity: 0.75;
 }
+body.menu-visible li {
+  opacity: 0;
+  list-style: none;
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+body.menu-visible li:nth-of-type(2) {
+  animation-delay: .45s;
+}
+body.menu-visible li:nth-of-type(3) {
+  animation-delay: .55s;
+}
+body.menu-visible li:nth-of-type(4) {
+  animation-delay: .65s;
+}
 /*** NAVIGATION ***/
 /** 3 BARS ICON **/
 .toggle {
@@ -602,19 +617,6 @@ body.menu-visible #over {
   -moz-transition: background-color 0.25s ease;
   -o-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
-  /* &:before, &:after {	
-			background-color: @content-bg;
-			position: fixed;
-			z-index: 11;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			.transition(background-color .25s ease);	
-			clear: both;
-
-			} */
 }
 /* //////// OVERLAYED MENU //////// */
 header.menu-fixed {
@@ -668,9 +670,10 @@ header.menu-fixed .row {
   -webkit-flex-direction: column;
   flex-direction: column;
 }
-header.menu-fixed .row p {
+header.menu-fixed p {
   padding: 10%;
   color: #fff;
+  text-align: center;
 }
 header.menu-fixed nav {
   display: -webkit-box;
@@ -712,8 +715,15 @@ header.menu-fixed nav ul a {
   text-decoration: none;
   color: #FF540D;
 }
-header.menu-fixed nav li {
-  list-style: none;
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
 /* ////// YOU BETTER BELIEVE IT /////// */
 body,
