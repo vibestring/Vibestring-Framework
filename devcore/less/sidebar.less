@@ -16,42 +16,34 @@ html, body {
   color: inherit;
 }
 
+#content {
+  background: #fff;
+}
+
+.menu-visible, .menu-visible > div  {
+  
+   overflow-x: hidden; 
+    overflow-y: auto;
+}
+
+
+/* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
+ 
+
 /**
  * Canvas
  */
 
 [canvas] {
-  z-index: 1;
+  z-index: 12;
+ 
 
-  		&.js-close-any-slidebar {
-				
-
-			.inner-hd {
-				div, p, li, a, span {
-					opacity: 0.9;
-					color: #fff !important;
-				}
-			}		
-		}
-		#over {
-			background: #fff;
+		#over {		
 			.transition(background .5 ease);
 		}
 
-		/* /////// CONTENT WHILE ACTIVE SIDEBAR ////// */
-		#over.over-sb-active {
-
-			opacity: 0.9;
-			height: 100%;
-			width:  100%;
-			top:0;
-			position: fixed;
-			z-index: 0;				
-			background-color: @dark;
-		}
+	
 }
-
-
 
 [canvas=container] {
   width: 100%;
@@ -60,6 +52,21 @@ html, body {
   position: relative;
   background-color: inherit; /* Basic background color, overwrite this in your own css. */
   -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS devices, may be removed by setting to 'auto' in your own CSS. */
+  .transition-property(transform);
+      &.js-close-any-slidebar {     
+        .transition-property(transform);
+        .transition(background-color .25 ease);
+        .transform(translate .25 ease);
+       background-color: @ghost !important;
+      
+
+      .inner-hd {
+        div, p, li, a, span, h1, h2, h3, form, b, button, input  {
+        opacity: 0.3 !important;      
+        color: @dark;   
+        }
+      }   
+    }
 }
 
 [canvas=container]:before, [canvas=container]:after {

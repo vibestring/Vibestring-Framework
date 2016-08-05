@@ -1,0 +1,1 @@
+$(window).load(function(){var n=function(){$("#file-name").html($("#file-type").val())};$("#browse-click").on("click",function(){return $("#file-type").click(),setInterval(n,1),!1})});

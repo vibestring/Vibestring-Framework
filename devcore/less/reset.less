@@ -1,3 +1,5 @@
+/* RESET CSS */
+
 html, body {
 	border: 0;
 	font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
@@ -39,3 +41,14 @@ a img {
 :focus {
   outline: 0;
 }
+
+/* ///// CLEARFIX ///// */
+
+  .clearfix:before, .clearfix:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  .clearfix:after {
+      clear: both;
+  }
